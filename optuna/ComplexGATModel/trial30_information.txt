@@ -1,0 +1,26 @@
+Model Information
+
+Args --> Namespace(epochs=50, outcome='function')
+Model Architecture --> ComplexGATModel(
+  (conv1): GATConv(1280, 64, heads=4)
+  (conv_last): GATConv(64, 64, heads=1)
+  (fc1): Linear(in_features=64, out_features=32, bias=True)
+  (fc2): Linear(in_features=32, out_features=1, bias=True)
+  (dropout): AlphaDropout(p=0.5, inplace=False)
+)
+Optimizer --> Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    initial_lr: 0.0001
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0.01
+)
+Loss Function --> FocalLoss()
+

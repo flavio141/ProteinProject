@@ -1,0 +1,24 @@
+Model Information
+
+Args --> Namespace(epochs=50, outcome='function')
+Model Architecture --> GCNModel(
+  (conv1): ChebConv(1280, 64, K=5, normalization=rw)
+  (conv2): ChebConv(64, 64, K=5, normalization=rw)
+  (fc): Linear(in_features=64, out_features=1, bias=True)
+  (dropout): AlphaDropout(p=0.4, inplace=False)
+)
+Optimizer --> ASGD (
+Parameter Group 0
+    alpha: 0.75
+    capturable: False
+    differentiable: False
+    foreach: None
+    initial_lr: 1e-05
+    lambd: 0.0001
+    lr: 1e-05
+    maximize: False
+    t0: 1000000.0
+    weight_decay: 0.0001
+)
+Loss Function --> FocalLoss()
+

@@ -1,0 +1,30 @@
+{
+    // Usare IntelliSense per informazioni sui possibili attributi.
+    // Al passaggio del mouse vengono visualizzate le descrizioni degli attributi esistenti.
+    // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FASTA",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "src/extract_pdb_fasta.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Train",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "src/train_test.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "ASCARIS",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "ASCARIS/code/main.py",
+            "console": "integratedTerminal",
+            "args": ["-s", "2", "-i", "ASCARIS/input_files/mutations.txt"]
+        }
+    ]
+}

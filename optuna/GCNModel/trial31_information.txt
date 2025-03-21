@@ -1,0 +1,25 @@
+Model Information
+
+Args --> Namespace(epochs=50, outcome='function')
+Model Architecture --> GCNModel(
+  (conv1): ChebConv(1280, 64, K=5, normalization=rw)
+  (conv2): ChebConv(64, 64, K=5, normalization=rw)
+  (fc): Linear(in_features=64, out_features=1, bias=True)
+  (dropout): AlphaDropout(p=0.3, inplace=False)
+)
+Optimizer --> AdamW (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    initial_lr: 1e-05
+    lr: 1e-05
+    maximize: False
+    weight_decay: 0.01
+)
+Loss Function --> FocalLoss()
+

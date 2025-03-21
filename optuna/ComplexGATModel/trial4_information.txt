@@ -1,0 +1,25 @@
+Model Information
+
+Args --> Namespace(epochs=50, outcome='function')
+Model Architecture --> ComplexGATModel(
+  (conv1): GATConv(1280, 64, heads=4)
+  (conv_last): GATConv(64, 64, heads=1)
+  (fc1): Linear(in_features=64, out_features=32, bias=True)
+  (fc2): Linear(in_features=32, out_features=1, bias=True)
+  (dropout): AlphaDropout(p=0.3, inplace=False)
+)
+Optimizer --> SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    initial_lr: 0.01
+    lr: 0.01
+    maximize: False
+    momentum: 0.3
+    nesterov: False
+    weight_decay: 0.0001
+)
+Loss Function --> FocalLoss()
+

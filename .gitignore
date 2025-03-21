@@ -1,0 +1,12 @@
+# Ignore
+venv
+ASCARIS
+ca
+cb
+embedding
+out_files
+topology
+dataset/*
+
+# Exceptions
+!dataset/data_train.csv

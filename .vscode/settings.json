@@ -1,0 +1,8 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.extraPaths": [
+        "./utils",
+        "./models"
+    ]
+}
