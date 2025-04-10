@@ -5,7 +5,7 @@ import sys
 sys.path.append('utils')
 
 from create_mut import create_fasta_mutated
-from download import download_pdb_alphafold, extract_fasta, data, folders
+from download import download_pdb, extract_fasta, data, folders
 
 
 parser = argparse.ArgumentParser(description=('Extract PDB files & FASTA sequences'))
@@ -27,7 +27,7 @@ def extract_pdb_files():
         if nans['wildtype'] != 0 or nans['position'] != 0 or nans['mutation'] != 0:
             data.dropna(subset = [max(nans.items(), key=lambda x: x[1])[0]])
 
-        download_pdb_alphafold(data['uniprot_id'].unique(), args)
+        download_pdb(data['uniprot_id'].unique(), args)
         
     except Exception as error:
         print(f'There was an error: {error}')

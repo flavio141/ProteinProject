@@ -8,7 +8,6 @@ import sys
 sys.path.append('utils')
 
 from env import folders, data
-from extract_features import extract_around_difference
 
 from Bio import SeqIO
 from tqdm import tqdm
@@ -107,12 +106,7 @@ if __name__ == "__main__":
             
             sequence_mut = str(SeqIO.read(os.path.join(folders['dataset']['fasta_mut'], f"{protein_mut}.fasta"), "fasta").seq)
 
-            if len(sequence_wt) > 1022:
-                sequence_wt, sequence_mut, end_pos, start_pos = extract_around_difference(sequence_wt, sequence_mut)
-            else:
-                end_pos, start_pos = len(sequence_wt), 0
-
-            ca_coords, amino_ca, pos_ca, cb_coords, amino_cb, pos_cb = get_ca_cb_coordinates(structure, end_pos, start_pos)
+            ca_coords, amino_ca, pos_ca, cb_coords, amino_cb, pos_cb = get_ca_cb_coordinates(structure, len(sequence_wt), 0)
 
             ca_distance_map = calculate_distance_map(ca_coords)
             cb_distance_map = calculate_distance_map(cb_coords)

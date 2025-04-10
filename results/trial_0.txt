@@ -1,0 +1,35 @@
+Model Information
+
+Epochs --> 30
+Model Architecture --> MixtureOfExpertsLight(
+  (experts): ModuleList(
+    (0-1): 2 x Expert(
+      (fc1): Linear(in_features=1280, out_features=128, bias=True)
+      (fc2): Linear(in_features=128, out_features=15, bias=True)
+    )
+  )
+  (gating): Linear(in_features=1280, out_features=2, bias=True)
+)
+Optimizer --> Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    initial_lr: 0.0001
+    lr: 0.0001
+    maximize: False
+    weight_decay: 0.001
+)
+Loss Function --> LossWrapper(
+  (loss): BCEWithLogitsLoss()
+)
+Scheduler --> <torch.optim.lr_scheduler.CosineAnnealingLR object at 0x7f915ab8b3d0>
+
+Argoments Information
+
+Args --> Namespace(trials=0, epochs=30, focal=False)
+

@@ -2,8 +2,8 @@ dataset_path: dataset/database.tsv
 
 folders:
   dataset: {'fasta' : 'dataset/fasta', 'fasta_mut' : 'dataset/fasta_mut', 'pdb_full' : 'dataset/pdb_full'}
-  embedding: {'fastaEmb': 'embedding/fastaEmb', 'additional_features': 'embedding/additional_features', 'graphs': 'embedding/graphs'}
-  splits: {'splits': 'splits'}
+  embedding: {'diff': 'embedding/diff', 'wt': 'embedding/wt', 'mut': 'embedding/mut', 'additional_features': 'embedding/additional_features', 'graphs': 'embedding/graphs'}
+  splits: {'splits': 'splits_multi'}
   train_val: {'trials': 'trials', 'logs': 'logs', 'results': 'results'}
   contact_map: {'ca': 'ca', 'cb': 'cb'}
   topology: {'topology': 'topology'}

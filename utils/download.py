@@ -17,7 +17,7 @@ def extract_atom_lines(pdb_content):
     return f"\n".join(atom_lines) + "\n"
 
 
-def download_pdb_alphafold(cIDs, args):
+def download_pdb(cIDs, args):
     try:
         if len(cIDs) == len(os.listdir(folders['dataset']['pdb_full'])):
             print('All PDB files are already downloaded')
